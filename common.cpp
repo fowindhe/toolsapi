@@ -183,5 +183,20 @@ int GetHostInfo()
     return ret;
 }
 
-
+//指定字符串长度不足补空格
+void stringFromat(string & src, size_t len)
+{
+	string dest = "";
+	if(len < src.size())
+	{
+		return;
+	}
+	
+	for(int i=0; i<len-src.size(); i++)
+	{
+		dest +=" ";
+	}
+	src += dest;
+	return;
+}
 
